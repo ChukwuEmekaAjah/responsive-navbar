@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Navbar learning</title>
+</head>
+<body>
+	<header>
+		<nav class="nav_desktop">
+			<a id="logo" href="">Ajah, C.S.</a>
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">Services</a>
+			<a href="">Clients</a>
+			<a href="">Testimonies</a>
+			<a href="">Contact us</a>
+		</nav>
+		<nav class="nav-mobile">
+			<a id="logo" href="">Ajah, C.S.</a>
+			<div id="mobile__nav" class="nav__controller">
+				<span class="nav__pills"></span>
+				<span class="nav__pills"></span>
+				<span class="nav__pills"></span>
+			</div>
+			<div id="nav-mobile__children" class="nav-mobile__children">
+				<a href="">Home</a>
+				<a href="">About</a>
+				<a href="">Services</a>
+				<a href="">Clients</a>
+				<a href="">Testimonies</a>
+				<a href="">Contact us</a>
+			</div>
+		</nav>
+	</header>
+	<style type="text/css">
+		.nav-mobile{
+			display:none;
+		}
+		.nav__pills{
+			border-top:2px solid white;
+			display:block;
+			margin-top:5px;
+			width: 20px;
+		}
+		
+		.nav-mobile__children{
+			display: none;
+			background:#333;
+			float:right;
+			margin-top:7%;
+		} 
+		.nav-mobile__children a {
+			display:block;
+			color:white;
+			margin:0px auto;
+			padding:0px auto;
+		}
+		.nav__controller{
+			float:right;
+			margin-right:5%;
+		}
+		body{
+			padding:0px;
+			margin:0px;
+		}
+		header{
+			background:#333;
+			width: 100%;
+			height:10vh;
+			margin:0px;
+		}
+		nav a {
+			color:white;
+			text-decoration: none;
+			margin:5px 10px;
+			padding:10px 10px;
+			font-family: Bebas;
+			word-spacing:0.3em;
+		}
+		#logo{
+			font-size:1.5em;
+			font-weight: bold;
+			margin-top:auto;
+			margin-right:20%;
+		}
+		nav{
+			padding-top:20px;
+		}
+		@media (max-width: 993px){
+			.nav_desktop{
+				display: none;
+			}
+			.nav-mobile{
+				display:block;
+				margin-left:5%;
+			}
+		}
+	</style>
+	<script type="text/javascript">
+		var nav_clicker = document.getElementById('mobile__nav')
+		nav_clicker.addEventListener('click',function(e){
+			var nav_mobile_children = document.getElementById('nav-mobile__children')
+			if(nav_mobile_children.style.display == 'block'){
+				nav_mobile_children.style.display = 'none';
+			}
+			else{
+				nav_mobile_children.style.display = 'block';
+			}
+		})
+	</script>
+</body>
+</html>
